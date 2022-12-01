@@ -1,0 +1,581 @@
+[
+    {
+        "id": "1",
+        "title": "Rucksack Flowerlogo Natural",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/1.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/1.webp",
+        "categories": ["Taschen", "Rucksäcke"],
+        "sale": "false",
+        "price": "1990"
+    },
+    {
+        "id": "2",
+        "title": "Rucksack Flowerlogo Black",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/2.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/2.webp",
+        "categories": ["Taschen", "Rucksäcke"],
+        "sale": "false",
+        "price": "1990"
+    },
+    {
+        "id": "3",
+        "title": "Beutel Wood",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/3.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/3.webp",
+        "categories": ["Taschen"],
+        "sale": "true",
+        "price": "1490"
+    },
+    {
+        "id": "4",
+        "title": "Rucksack Flowers White",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/4.webp", "https://pascaldoeding.de/dev/shopdemo/4-1.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/4.webp",
+        "categories": ["Taschen", "Rucksäcke"],
+        "sale": "false",
+        "price": "1990"
+    },
+    {
+        "id": "5",
+        "title": "Rucksack Flowers Natural",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/5.webp", "https://pascaldoeding.de/dev/shopdemo/5-1.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/5.webp",
+        "categories": ["Taschen", "Rucksäcke"],
+        "sale": "true",
+        "price": "1790"
+    },
+    {
+        "id": "6",
+        "title": "Shirt Wood",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/6.webp", "https://pascaldoeding.de/dev/shopdemo/6-1.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/6.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "7",
+        "title": "Shirt Wall",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/7.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/7.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "8",
+        "title": "Shirt Flowerlogo White",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/8.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/8.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "9",
+        "title": "Shirt Flowerlogo Grey",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/9.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/9.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "true"
+    },
+    {
+        "id": "10",
+        "title": "Shirt Drop White",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/10.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/10.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "11",
+        "title": "Shirt Drop Grey",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/11.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/11.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "12",
+        "title": "Shirt Drop Natural",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/12.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/12.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "13",
+        "title": "Shirt Trees White",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/13.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/13.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "14",
+        "title": "Shirt Trees Natural",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/14.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/14.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "15",
+        "title": "Shirt Rect Red/White",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/15.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/15.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "16",
+        "title": "Shirt Rect Black/White",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/16.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/16.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "true"
+    },
+    {
+        "id": "17",
+        "title": "Shirt Eye Pocket",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/17.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/17.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "18",
+        "title": "Shirt Withered",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/18.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/18.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "19",
+        "title": "Shirt Flowers Grey",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/19.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/19.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "20",
+        "title": "Shirt Flowers White",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/20.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/20.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "21",
+        "title": "Shirt Flowers Natural",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/21.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/21.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "22",
+        "title": "Shirt Girl White",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/22.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/22.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "23",
+        "title": "Shirt Girl Natural",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/23.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/23.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "24",
+        "title": "Shirt Bridge White",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/24.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/24.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "25",
+        "title": "Shirt Bridge Grey",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/25.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/25.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts"],
+        "sale": "false"
+    },
+    {
+        "id": "26",
+        "title": "Top Rhomb Black",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/26.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/26.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts", "Tops"],
+        "sale": "false"
+    },
+    {
+        "id": "27",
+        "title": "Top Rhomb White",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/27.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/27.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1990"
+            },
+            {
+                "title": "M",
+                "price": "2490"
+            },
+            {
+                "title": "L",
+                "price": "2990"
+            }
+        ],
+        "categories": ["Shirts", "Tops"],
+        "sale": "false"
+    },
+    {
+        "id": "28",
+        "title": "Top Flowerlogo Black",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+        "images": ["https://pascaldoeding.de/dev/shopdemo/28.webp"],
+        "thumbnail": "https://pascaldoeding.de/dev/shopdemo/thumbnails/28.webp",
+        "variants": [
+            {
+                "title": "S",
+                "price": "1790"
+            },
+            {
+                "title": "M",
+                "price": "2290"
+            },
+            {
+                "title": "L",
+                "price": "2490"
+            }
+        ],
+        "categories": ["Shirts", "Tops"],
+        "sale": "true"
+    }
+]

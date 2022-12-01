@@ -1,0 +1,38 @@
+//@use 'globals/functions';
+//@use 'globals/functions' as *;
+// @use 'globals/queries' as *;
+
+@use 'globals' as *;
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-color);
+
+  > * {
+    padding: var(--space-2xs-m);
+  }
+}
+
+.main {
+  flex-grow: 1;
+  // max-width: functions.rem(870);
+  max-width: rem(870);
+  margin-inline: auto;
+
+  p {
+    hyphens: auto;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.site-header,
+.site-footer {
+  color: var(--header-footer-color);
+  background-color: var(--header-footer-background-color);
+}

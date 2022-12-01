@@ -1,0 +1,12 @@
+@use 'normalize';
+// @use 'globals/queries';
+// @use 'globals/colors';
+// @use 'globals/spacings';
+// @use 'layout';
+// @use 'navigation';
+@use 'typographie';
+@use 'shop';
+
+body, html{
+    background: url('../bg.png')
+}

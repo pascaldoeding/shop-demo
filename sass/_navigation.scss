@@ -1,0 +1,22 @@
+a {
+  color: var(--link-color);
+  &:hover,
+  &:focus {
+    color: var(--active-link-color);
+  }
+}
+
+.main-navigation {
+  --link-color: var(--nav-link-color);
+  --active-link-color: var(--nav-active-link-color);
+  > ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

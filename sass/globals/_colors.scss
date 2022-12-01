@@ -1,0 +1,57 @@
+/*
+CSS-Variablen können im Browser geändert werden (via Media Queries oder JavaScript),
+wenn man z.B. den Farbwert einer Variable ändert, ändert sich auch überall die Farbe,
+wo die Variable als Wert verwendet wird.
+Zudem haben die Variablen einen "Scope", d.h. man kann den Wert einer Variable nur
+in einem Teil des HTML setzen bzw. überschreiben. Wenn man den Wert einer Variable
+verwendet, wird zuerst geprüft, ob die das mit Selektor angesprochenen Element
+selbst diese Variable hat, wenn nicht, werden alle Elternelemente nach der Variable
+durchsucht, bis sie gefunden wurde. 
+:root entspricht dem obersten Element, d.h. man könnte hier auch einfach html als
+Selektor nehmen, :root ist nur eine Konvention.
+Native CSS-Variablen sind flexibler und mächtiger als Sass-Variablen, so dass sie
+für z.B. Farben oder Größenangaben bevorzugt verwendet werden sollten.
+*/
+:root {
+  // Signalisiere, dass die Seite helle und dunkle Darstellung unterstützt.
+  //https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#aa-handling-user-agent-styles
+  color-scheme: light dark;
+
+  // Variablennamen zum Beschreiben der Farbe
+  --imperial-red: hsl(354.8 60.6% 51.2%);
+  --honeydew: hsl(105 55% 96%);
+  --powder-blue: hsl(182 43% 76%);
+  --celadon-blue: hsl(203 39% 44%);
+  --prussian-blue: hsl(215 50% 23%);
+  --black: hsl(0 10% 6%);
+
+  // Variablennamen zum Beschreiben der Funktion
+  --background-color: var(--honeydew);
+  --text-color: var(--prussian-blue);
+  --heading-color: var(--imperial-red);
+  --link-color: var(--imperial-red);
+  --active-link-color: var(--celadon-blue);
+  --nav-link-color: var(--honeydew);
+  --nav-active-link-color: var(--prussian-blue);
+  --header-footer-background-color: var(--imperial-red);
+  --header-footer-color: var(--honeydew);
+
+  // https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web
+  @media (prefers-color-scheme: dark) {
+    --background-color: var(--prussian-blue);
+    --text-color: var(--honeydew);
+    --nav-link-color: var(--imperial-red);
+    --nav-active-link-color: var(--honeydew);
+    --header-footer-color: var(--celadon-blue);
+    --header-footer-background-color: var(--black);
+    img {
+      // Bilder können mit Filtern etwas abgedunkelt werden.
+      // Zusätzlich kann man den Kontrast etwas zu erhöhen, damit die Bilder nicht zu blass werden:
+      filter: brightness(0.8) contrast(1.2);
+    }
+  }
+}
+
+* {
+  transition: color, background-color 0.5s ease;
+}

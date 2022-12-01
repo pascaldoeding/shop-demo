@@ -1,0 +1,78 @@
+@use 'functions' as *;
+
+/*
+Sass-Variablen beginnen mit einem Dollarzeichen, danach
+der Name der Variable. Dann ein Doppelpunkt und irgendein
+für CSS gültiger Wert, z.B. Farbe, Größe, Schriftart etc.
+Beim kompilieren zu CSS wird die Variable durch den gespeicherten
+Wert ersetzt, für den Browser ist also nicht ersichtlich, dass es
+sich einmal um eine Variable gehandelt hat.
+Für die meisten Anwendungsfälle können und sollten
+CSS-Variablen genutzt werden, da diese im Browser noch als Variablen
+"leben" und manipuliert werden können.
+CSS-Variablen können allerdings nicht für media-Queries verwendet werden, 
+hier sind Sass-Variablen noch immer sinnvoll.
+Empfehlenswert ist es, im Variablennamen anzugeben, ob ein Breakpoint einen 
+Minimal- oder Maximalwert bezeichnet. Man sollte auch nicht Pixelwerte direkt
+nehmen, sondern die Pixelwerte in rem umrechnen. Dadurch ändern sich auch
+die Breakpoints, wenn im Browser die Schriftgröße geändert wird. Wenn also
+im Browser die Schrift auf 20 statt der üblichen 16 Pixel eingestellt
+ist, wird beispielsweise früher von einem zwei- auf ein einspaltiges
+Layout umgeschaltet, was gut ist, da die größere Schrift ja mehr Platz
+benötigt. Würde man Pixel direkt für die Breakpoints nehmen, müsste die
+größere Schrift ins gleiche Layout passen, was aber oft nicht der Fall ist.
+Richtlinie: Möglichst alle Größenangaben in rem vornehmen, außer man möchte
+explizit nicht, dass sie die Größe ändern können, was z.B. für border,
+border-radius, Schatten o.ä. aus ästhetischen Gründen der Fall sein kann.
+Das Layout muss bis mindestens der doppelten Schriftgröße (32px im Browser)
+oder einem Seitenzoom von 200% noch funktionieren, Menschen mit visuellen 
+Einschränkungen setzen die Schriftgröße aber oft noch höher oder zoomen
+noch stärker ein.
+*/
+
+$small-max: rem(500);
+$large-min: rem(1000);
+
+// Möchte man eine Sass-Variable oder eine Sass-Funktion
+// an einer Stelle nutzen, an der Sass nicht eindeutig erkennen
+// kann, dass es sich um einen Sass-Wert handelt (und nicht um eine
+// Zeichenfolge in einem String), so muss man die Variable bzw. Funktion
+// "interpolieren", also als Sass markieren, und zwar mit #{}
+// Auch wenn man einer CSS-Variable den Wert einer Sass-Variable zuweisen
+// möchte, benötigt man diesen Syntax, da die Werte von CSS-Variablen
+// als String behandelt werden: --test: #{}
+
+//$small: 'max-width: #{$small-max}';
+$small: 'width <= #{$small-max}';
+$medium: '#{$small-max} < width < #{$large-min}';
+$large: 'width >= #{$large-min}';
+/* Alte und mühsame Schreibweise für Media Queries: */
+//$medium-old: '(min-width: #{$small-max + 0.01rem} ) and (max-width: #{$large-min - 0.01rem})';
+
+.query-demo {
+  height: 10rem;
+  width: 10rem;
+
+  @media ($small) {
+    background: palegreen;
+  }
+
+  @media ($medium) {
+    background: purple;
+  }
+
+  @media ($large) {
+    background: palevioletred;
+  }
+}
+
+/* 
+Es gibt auch einen neuen Syntax, mit dem Media Queries in einer speziellen
+Variante von globalen CSS-Variablen gespeichert werden können. Dieser
+Syntax wird aber von noch keinem Browser unterstützt und könnte sich auch
+noch ändern. Dank PostCSS könnte er aber schon heute verwendet werden, wenn
+man damit leben kann, dass der Editor sich über ungültigen, weil noch unbekannten
+Syntax beschwert.
+https://www.stefanjudis.com/notes/can-we-have-custom-media-queries-please/
+*/
+@custom-media --large (width >= #{$large-min});
