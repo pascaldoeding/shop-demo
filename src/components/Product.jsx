@@ -2,13 +2,13 @@ import { useEffect, useState } from "react"
 import { getFormattedPrice, getPriceRange } from "./helpers";
 
 export default function Product({id, title, thumbnail, variants, sale, price, basketDispatch, wishlistDispatch, wishlist, setDetailProduct}) {
-    const [variant, setVariant] = useState(null);
+    const [variant, setVariant] = useState('');
     const [currentPrice, setCurrentPrice] = useState(null);
 
     const isOnWishlist = wishlist.some(item => item === id);
 
     useEffect(() => {
-        if(price && !variant){
+        if(price && variant === ''){
             setCurrentPrice(`${getFormattedPrice(price)} €`);
         } else {
             setCurrentPrice(`${getPriceRange(variants.map(({price}) => parseInt(price)))} €`);
@@ -17,13 +17,12 @@ export default function Product({id, title, thumbnail, variants, sale, price, ba
 
     useEffect(() => {
         if(variants){
-            if(variant !== null) {
-                setCurrentPrice(`${getFormattedPrice(variants[variant].price)} €`);
+            if(variant !== '') {
+                setCurrentPrice(`${getFormattedPrice(variants[parseInt(variant)].price)} €`);
             } else{
                 setCurrentPrice(`${getPriceRange(variants.map(({price}) => parseInt(price)))} €`);
             }
         }
-        console.log(parseInt(null));
     }, [variant])
 
   return (
@@ -35,9 +34,9 @@ export default function Product({id, title, thumbnail, variants, sale, price, ba
             <span className="product-title">{title}</span>
             {variants && 
             <label className="product-variant">Variante:
-            <select>
-                <option value="null" onClick={() => setVariant(null)}></option>
-                {variants.map((variant, index) => <option key={index} value={index} onClick={() => setVariant(index)}>{variant.title}</option>)}
+            <select value={variant} onChange={(e) => setVariant(e.currentTarget.value)}>
+                <option value=""></option>
+                {variants.map((variant, index) => <option key={index} value={index}>{variant.title}</option>)}
             </select>
             </label>}
             <span className="product-price">
@@ -45,7 +44,7 @@ export default function Product({id, title, thumbnail, variants, sale, price, ba
             </span>
             <div className="product-menu">
                 <button 
-                    className={`product-menu-button ${variants && variant === null ? 'disabled' : ''}`} 
+                    className={`product-menu-button ${variants && variant === '' ? 'disabled' : ''}`} 
                     title="Zum Warenkorb hinzufügen" 
                     disabled={variants && variant === null ? true : false}
                     onClick={() => basketDispatch({id, variant, action: 'add'})}

@@ -131,7 +131,7 @@ function basketReducer(basket, message) {
     switch (message.action){
       case 'add':
         if(productNotInBasket){
-            if(message.variant !== null && message.variant !== undefined){
+            if(message.variant !== '' && message.variant !== undefined){
                 return [...basket, {id: message.id, variants:[{id: message.variant, amount: 1}]}];
             }
             return [...basket, {id: message.id, amount: 1}];
@@ -139,7 +139,7 @@ function basketReducer(basket, message) {
 
         return basket.map((item) => {
           if(item.id === message.id) {
-            if(message.variant !== null && message.variant !== undefined){
+            if(message.variant !== '' && message.variant !== undefined){
                 const variantNotInBasket = !item.variants.some(({id}) => id === message.variant);
                 if(variantNotInBasket){
                    return {id: item.id, variants:[...item.variants, {id: message.variant, amount: 1}]};
@@ -162,7 +162,7 @@ function basketReducer(basket, message) {
       case 'remove':
         return basket.map((item) => {
           if(item.id === message.id) {
-            if(message.variant !== null && message.variant !== undefined){
+            if(message.variant !== '' && message.variant !== undefined){
                 return {
                     id: item.id,
                     variants: item.variants.map((variant) =>{

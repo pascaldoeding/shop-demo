@@ -14,11 +14,11 @@ export default function ProductDetail({id, basketDispatch, wishlistDispatch, wis
     const {title, description, images, variants, sale, price} = product;
      const isOnWishlist = wishlist.some(item => item === id);
 
-    const [variant, setVariant] = useState(null);
+    const [variant, setVariant] = useState('');
     const [currentPrice, setCurrentPrice] = useState(null);
 
     useEffect(() => {
-        if(price && !variant){
+        if(price && variant === ''){
             setCurrentPrice(`${getFormattedPrice(price)} €`);
         } else {
             setCurrentPrice(`${getPriceRange(variants.map(({price}) => parseInt(price)))} €`);
@@ -27,8 +27,8 @@ export default function ProductDetail({id, basketDispatch, wishlistDispatch, wis
 
     useEffect(() => {
         if(variants){
-            if(variant !== null) {
-                setCurrentPrice(`${getFormattedPrice(variants[variant].price)} €`);
+            if(variant !== '') {
+                setCurrentPrice(`${getFormattedPrice(variants[parseInt(variant)].price)} €`);
             } else{
                 setCurrentPrice(`${getPriceRange(variants.map(({price}) => parseInt(price)))} €`);
             }
@@ -49,9 +49,9 @@ export default function ProductDetail({id, basketDispatch, wishlistDispatch, wis
             <p className="product-detail-description">{description}</p>
             {variants && 
             <label className="product-detail-variant">Variante:
-            <select>
-                <option value="null" onClick={() => setVariant(null)}></option>
-                {variants.map((variant, index) => <option key={index} value={index} onClick={() => setVariant(index)}>{variant.title}</option>)}
+            <select value={variant} onChange={(e) => setVariant(e.currentTarget.value)}>
+                <option value=""></option>
+                {variants.map((variant, index) => <option key={index} value={index}>{variant.title}</option>)}
             </select>
             </label>}
             <span className="product-detail-price">{currentPrice}</span>
