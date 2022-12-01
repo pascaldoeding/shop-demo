@@ -59,7 +59,7 @@ export default function ProductDetail({id, basketDispatch, wishlistDispatch, wis
             <button 
                     className={`product-detail-menu-button ${variants && variant === '' ? 'disabled' : ''}`} 
                     title="Zum Warenkorb hinzufügen" 
-                    disabled={variants && variant === null ? true : false}
+                    disabled={variants && variant === '' ? true : false}
                     onClick={() => {
                         basketDispatch({id, variant, action: 'add'});
                         setDelayedAlert(setAlert, `"${title}" ${variant !== '' ? '(' + variants[variant].title + ')' : ''} zum Warenkorb hinzugefügt`);
