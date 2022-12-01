@@ -1,12 +1,12 @@
 import { getFormattedPrice } from "./helpers";
 import { getProduct } from "./Shop"
 
-export default function BasketItem({id, amount, variants, basketDispatch}) {
+export default function BasketItem({id, amount, variants, basketDispatch, setDetailProduct, setShowBasket}) {
     const product = getProduct(id);
 
   return (
     <li className="basket-item">
-        <div className="item-image">
+        <div className="item-image"  title="Produkt ansehen" onClick={() => { setShowBasket(false); setDetailProduct(id) }}>
             <img src={product.thumbnail} alt={product.title} />
         </div>
         <div className="item-details">

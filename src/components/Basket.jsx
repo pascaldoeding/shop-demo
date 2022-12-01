@@ -2,12 +2,12 @@ import BasketItem from "./BasketItem";
 import { getFormattedPrice } from "./helpers";
 import { getProduct } from "./Shop";
 
-export default function Basket({basket, basketDispatch}) {
+export default function Basket({basket, basketDispatch, setDetailProduct, setShowBasket}) {
   return (
     <div className="basket">
         <h2>Warenkorb</h2>
         <ul className="basket-items">
-            {basket.map(item => <BasketItem key={item.id} {...item} basketDispatch={basketDispatch} />)}
+            {basket.map(item => <BasketItem key={item.id} {...item} basketDispatch={basketDispatch} setDetailProduct={setDetailProduct} setShowBasket={setShowBasket} />)}
             <li className="basket-item basket-total">Gesamt: {getFormattedPrice(getTotalPrice(basket))} €</li>
         </ul>
         <button className="basket-button" onClick={() => basketDispatch({action: 'clear'})}>

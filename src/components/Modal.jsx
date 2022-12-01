@@ -18,7 +18,7 @@ export default function Modal({basket, showBasket, setShowBasket, basketDispatch
         }}>
             <div className="modal">
                 <div className="modal-content">
-                    {showBasket && <Basket basket={basket} basketDispatch={basketDispatch} />}
+                    {showBasket && <Basket basket={basket} basketDispatch={basketDispatch} setDetailProduct={setDetailProduct} setShowBasket={setShowBasket} />}
                     {showWishlist && <Wishlist wishlist={wishlist} wishlistDispatch={wishlistDispatch} setDetailProduct={setDetailProduct} setShowWishlist={setShowWishlist} />}
                     {(detailProduct !== null) && <ProductDetail id={detailProduct} wishlist={wishlist} wishlistDispatch={wishlistDispatch} basketDispatch={basketDispatch}/>}
                     
