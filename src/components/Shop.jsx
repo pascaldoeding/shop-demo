@@ -246,5 +246,5 @@ export function setDelayedAlert(setAlert, alert){
     setAlert(false);
     setTimeout(() => {
         setAlert(alert);
-    }, 300);
+    }, 200);
 }
