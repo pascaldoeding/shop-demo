@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getFormattedPrice, getPriceRange } from "./helpers";
 
-export default function Product({id, title, thumbnail, variants, sale, price, basketDispatch, wishlistDispatch, wishlist, setDetailProduct}) {
+export default function Product({id, title, thumbnail, variants, sale, price, basketDispatch, wishlistDispatch, wishlist, setDetailProduct, setAlert}) {
     const [variant, setVariant] = useState('');
     const [currentPrice, setCurrentPrice] = useState(null);
 
@@ -46,8 +46,11 @@ export default function Product({id, title, thumbnail, variants, sale, price, ba
                 <button 
                     className={`product-menu-button ${variants && variant === '' ? 'disabled' : ''}`} 
                     title="Zum Warenkorb hinzufügen" 
-                    disabled={variants && variant === null ? true : false}
-                    onClick={() => basketDispatch({id, variant, action: 'add'})}
+                    disabled={variants && variant === '' ? true : false}
+                    onClick={() => {
+                        basketDispatch({id, variant, action: 'add'});
+                        setAlert(`"${title}" ${variant !== '' ? '(' + variants[variant].title + ')' : ''} zum Warenkorb hinzugefügt`);
+                    }}
                 >
                     <img src="icons/cart.svg"></img>
                 </button>

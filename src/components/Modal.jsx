@@ -2,7 +2,7 @@ import Basket from "./Basket";
 import ProductDetail from "./ProductDetail";
 import Wishlist from "./Wishlist";
 
-export default function Modal({basket, showBasket, setShowBasket, basketDispatch, wishlist, showWishlist, setShowWishlist, wishlistDispatch, detailProduct, setDetailProduct}) {
+export default function Modal({basket, showBasket, setShowBasket, basketDispatch, wishlist, showWishlist, setShowWishlist, wishlistDispatch, detailProduct, setDetailProduct, setAlert}) {
 
     function resetModal() {
         setShowBasket(false);
@@ -20,7 +20,7 @@ export default function Modal({basket, showBasket, setShowBasket, basketDispatch
                 <div className="modal-content">
                     {showBasket && <Basket basket={basket} basketDispatch={basketDispatch} setDetailProduct={setDetailProduct} setShowBasket={setShowBasket} />}
                     {showWishlist && <Wishlist wishlist={wishlist} wishlistDispatch={wishlistDispatch} setDetailProduct={setDetailProduct} setShowWishlist={setShowWishlist} />}
-                    {(detailProduct !== null) && <ProductDetail id={detailProduct} wishlist={wishlist} wishlistDispatch={wishlistDispatch} basketDispatch={basketDispatch}/>}
+                    {(detailProduct !== null) && <ProductDetail id={detailProduct} wishlist={wishlist} wishlistDispatch={wishlistDispatch} basketDispatch={basketDispatch} setAlert={setAlert}/>}
                     
                     <button className="modal-close" onClick={resetModal}>
                         <img src="icons/xmark.svg" alt="Close"/>

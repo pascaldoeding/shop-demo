@@ -3,7 +3,7 @@ import { getFormattedPrice, getPriceRange } from "./helpers";
 import ImageGallery from "./ImageGallery";
 import { getProduct } from "./Shop"
 
-export default function ProductDetail({id, basketDispatch, wishlistDispatch, wishlist}) {
+export default function ProductDetail({id, basketDispatch, wishlistDispatch, wishlist, setAlert}) {
     const product = getProduct(id);
 
     // Wenn Produkt nicht existiert
@@ -60,7 +60,10 @@ export default function ProductDetail({id, basketDispatch, wishlistDispatch, wis
                     className={`product-detail-menu-button ${variants && variant === '' ? 'disabled' : ''}`} 
                     title="Zum Warenkorb hinzufügen" 
                     disabled={variants && variant === null ? true : false}
-                    onClick={() => basketDispatch({id, variant, action: 'add'})}
+                    onClick={() => {
+                        basketDispatch({id, variant, action: 'add'});
+                        setAlert(`"${title}" ${variant !== '' ? '(' + variants[variant].title + ')' : ''} zum Warenkorb hinzugefügt`);
+                    }}
                 >
                     <img src="icons/cart.svg"></img>
                     Zum Warenkorb hinzufügen

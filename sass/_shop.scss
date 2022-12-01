@@ -198,6 +198,27 @@
         }
     }
 
+    &-alert{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(231,76,57, 0.9);
+        color: #ffffff;
+        padding: 16px;
+        border-radius: 8px;
+        right: 100px;
+        bottom: 20px;
+        z-index: 200;
+
+        @media (max-width: 800px) {
+            right: unset;
+            left: 20px;
+            bottom: 20px;
+        }
+        
+    }
+
     .overlay{
         position: fixed;
         z-index: 100;

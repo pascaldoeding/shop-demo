@@ -1,4 +1,5 @@
 import { useEffect, useReducer, useState } from "react"
+import Alert from "./Alert";
 import FilterBar from "./FilterBar";
 import Modal from "./Modal";
 import ProductList from "./ProductList";
@@ -20,6 +21,8 @@ export default function Shop() {
     const [wishlist, wishlistDispatch] = useReducer(wishlistReducer, [], getInitialWishlist);
 
     const [detailProduct, setDetailProduct] = useState(null);
+
+    const [alert, setAlert] = useState(false)
 
     useEffect(() => {
         localStorage.setItem('basket', JSON.stringify(basket))
@@ -64,10 +67,17 @@ export default function Shop() {
         window.history.replaceState({}, [], url)
     }, [detailProduct])
 
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+             setAlert(false);
+        }, 1000);
+        return () => clearTimeout(timeout);
+    }, [alert])
+
   return (
     <div className="shop">
         <FilterBar categories={categories} filters={filters} filtersDispatch={filtersDispatch} />
-        <ProductList products={products} basketDispatch={basketDispatch} wishlistDispatch={wishlistDispatch} wishlist={wishlist} setDetailProduct={setDetailProduct} />
+        <ProductList products={products} basketDispatch={basketDispatch} wishlistDispatch={wishlistDispatch} wishlist={wishlist} setDetailProduct={setDetailProduct} setAlert={setAlert}/>
 
         <ShopMenu basket={basket} showBasket={showBasket} setShowBasket={setShowBasket} wishlist={wishlist} showWishlist={showWishlist} setShowWishlist={setShowWishlist}/>
 
@@ -83,8 +93,11 @@ export default function Shop() {
                 wishlistDispatch={wishlistDispatch} 
                 detailProduct={detailProduct}
                 setDetailProduct={setDetailProduct}
+                setAlert={setAlert}
             />
         }
+
+        {alert && <Alert alert={alert} />}
     </div>
   )
 }
