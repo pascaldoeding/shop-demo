@@ -38,13 +38,13 @@ export default function ProductDetail({id, basketDispatch, wishlistDispatch, wis
     return (
         <div className={`product-detail ${sale === 'true' ? 'sale' : ''}`}>
             <h2 className="product-detail-title">{title}</h2>
-            <div className="product-detail-image">
-                {images.length > 1 ?
-                    <ImageGallery images={images} />
-                    :
+            {images.length > 1 ?
+                <ImageGallery images={images} />
+                :
+                <div className="product-detail-image">
                     <img src={images[0]} alt={title}/>
-                }
-            </div>
+                </div>
+            }
 
             <p className="product-detail-description">{description}</p>
             {variants && 
