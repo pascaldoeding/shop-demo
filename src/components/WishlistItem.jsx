@@ -5,7 +5,7 @@ export default function WishlistItem({id, wishlistDispatch, setDetailProduct, se
 
     return (
         <li className="wishlist-item">
-            <div className="wishlist-item-image" title="Produkt ansehen" onClick={() => { setDetailProduct(id); setShowWishlist(false) }}>
+            <div className="wishlist-item-image" title="Produkt ansehen" onClick={() => { setShowWishlist(false); setDetailProduct(id) }}>
                 <img src={product.thumbnail} alt={product.title}/>
                 <span className="wishlist-item-title">{product.title}</span>
             </div>
