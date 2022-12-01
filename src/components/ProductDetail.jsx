@@ -57,7 +57,7 @@ export default function ProductDetail({id, basketDispatch, wishlistDispatch, wis
             <span className="product-detail-price">{currentPrice}</span>
             <div className="product-detail-menu">
             <button 
-                    className={`product-detail-menu-button ${variants && variant === null ? 'disabled' : ''}`} 
+                    className={`product-detail-menu-button ${variants && variant === '' ? 'disabled' : ''}`} 
                     title="Zum Warenkorb hinzufügen" 
                     disabled={variants && variant === null ? true : false}
                     onClick={() => basketDispatch({id, variant, action: 'add'})}
