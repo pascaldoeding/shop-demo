@@ -96,6 +96,7 @@
                 .product-variant{
                     display: flex;
                     justify-content: center;
+                    align-items: center;
 
                     select{
                         margin-left: 24px;
@@ -536,6 +537,7 @@
                     &-variant{
                         display: inline-flex;
                         justify-content: center;
+                        align-items: center;
 
                         select{
                             margin-left: 24px;
