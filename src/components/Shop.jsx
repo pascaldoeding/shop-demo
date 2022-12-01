@@ -22,7 +22,7 @@ export default function Shop() {
 
     const [detailProduct, setDetailProduct] = useState(null);
 
-    const [alert, setAlert] = useState(false)
+    const [alert, setAlert] = useState(false);
 
     useEffect(() => {
         localStorage.setItem('basket', JSON.stringify(basket))
@@ -68,10 +68,12 @@ export default function Shop() {
     }, [detailProduct])
 
     useEffect(() => {
-        const timeout = setTimeout(() => {
-             setAlert(false);
-        }, 1000);
-        return () => clearTimeout(timeout);
+        if(alert){
+            const timeout = setTimeout(() => {
+                setAlert(false);
+           }, 1000);
+           return () => clearTimeout(timeout);
+        }
     }, [alert])
 
   return (
@@ -238,4 +240,11 @@ function wishlistReducer(wishlist, message) {
 function getInitialWishlist(){
     const savedWishlist = JSON.parse(localStorage.getItem('wishlist'));
     return savedWishlist ? savedWishlist : [];
+}
+
+export function setDelayedAlert(setAlert, alert){
+    setAlert(false);
+    setTimeout(() => {
+        setAlert(alert);
+    }, 300);
 }

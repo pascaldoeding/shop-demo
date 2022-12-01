@@ -211,6 +211,12 @@
         bottom: 20px;
         z-index: 200;
 
+        // Animation
+        transform: translateY(100px);
+        -webkit-transform: translateY(100px);
+        animation: slide-in 0.3s forwards;
+        -webkit-animation: slide-in 0.3s forwards;
+
         @media (max-width: 800px) {
             right: unset;
             left: 20px;
@@ -624,4 +630,13 @@
         }
     }
     
+}
+
+// Slide-In Animation
+@keyframes slide-in {
+    100% { transform: translateY(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateY(0%); }
 }

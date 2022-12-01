@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getFormattedPrice, getPriceRange } from "./helpers";
 import ImageGallery from "./ImageGallery";
-import { getProduct } from "./Shop"
+import { getProduct, setDelayedAlert } from "./Shop"
 
 export default function ProductDetail({id, basketDispatch, wishlistDispatch, wishlist, setAlert}) {
     const product = getProduct(id);
@@ -12,7 +12,7 @@ export default function ProductDetail({id, basketDispatch, wishlistDispatch, wis
     }
 
     const {title, description, images, variants, sale, price} = product;
-     const isOnWishlist = wishlist.some(item => item === id);
+    const isOnWishlist = wishlist.some(item => item === id);
 
     const [variant, setVariant] = useState('');
     const [currentPrice, setCurrentPrice] = useState(null);
@@ -62,7 +62,7 @@ export default function ProductDetail({id, basketDispatch, wishlistDispatch, wis
                     disabled={variants && variant === null ? true : false}
                     onClick={() => {
                         basketDispatch({id, variant, action: 'add'});
-                        setAlert(`"${title}" ${variant !== '' ? '(' + variants[variant].title + ')' : ''} zum Warenkorb hinzugefügt`);
+                        setDelayedAlert(setAlert, `"${title}" ${variant !== '' ? '(' + variants[variant].title + ')' : ''} zum Warenkorb hinzugefügt`);
                     }}
                 >
                     <img src="icons/cart.svg"></img>

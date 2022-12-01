@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { getFormattedPrice, getPriceRange } from "./helpers";
+import { setDelayedAlert } from "./Shop";
 
 export default function Product({id, title, thumbnail, variants, sale, price, basketDispatch, wishlistDispatch, wishlist, setDetailProduct, setAlert}) {
     const [variant, setVariant] = useState('');
@@ -49,7 +50,8 @@ export default function Product({id, title, thumbnail, variants, sale, price, ba
                     disabled={variants && variant === '' ? true : false}
                     onClick={() => {
                         basketDispatch({id, variant, action: 'add'});
-                        setAlert(`"${title}" ${variant !== '' ? '(' + variants[variant].title + ')' : ''} zum Warenkorb hinzugefügt`);
+                        //setAlert(`"${title}" ${variant !== '' ? '(' + variants[variant].title + ')' : ''} zum Warenkorb hinzugefügt`);
+                        setDelayedAlert(setAlert, `"${title}" ${variant !== '' ? '(' + variants[variant].title + ')' : ''} zum Warenkorb hinzugefügt`);
                     }}
                 >
                     <img src="icons/cart.svg"></img>
