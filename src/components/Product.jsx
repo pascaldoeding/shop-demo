@@ -50,7 +50,6 @@ export default function Product({id, title, thumbnail, variants, sale, price, ba
                     disabled={variants && variant === '' ? true : false}
                     onClick={() => {
                         basketDispatch({id, variant, action: 'add'});
-                        //setAlert(`"${title}" ${variant !== '' ? '(' + variants[variant].title + ')' : ''} zum Warenkorb hinzugefügt`);
                         setDelayedAlert(setAlert, `"${title}" ${variant !== '' ? '(' + variants[variant].title + ')' : ''} zum Warenkorb hinzugefügt`);
                     }}
                 >
