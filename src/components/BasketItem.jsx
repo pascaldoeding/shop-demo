@@ -7,7 +7,7 @@ export default function BasketItem({id, amount, variants, basketDispatch, setDet
   return (
     <li className="basket-item">
         <div className="item-image"  title="Produkt ansehen" onClick={() => { setShowBasket(false); setDetailProduct(id) }}>
-            <img src={product.thumbnail} alt={product.title} />
+            <img src={product.thumbnail} alt={product.title} width="100" height="100"/>
         </div>
         <div className="item-details">
             <span className="item-title">{product.title}</span>

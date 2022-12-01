@@ -42,7 +42,7 @@ export default function ProductDetail({id, basketDispatch, wishlistDispatch, wis
                 <ImageGallery images={images} />
                 :
                 <div className="product-detail-image">
-                    <img src={images[0]} alt={title}/>
+                    <img src={images[0]} alt={title} width="100" height="100" />
                 </div>
             }
 

@@ -29,7 +29,7 @@ export default function Product({id, title, thumbnail, variants, sale, price, ba
   return (
     <li className={`product ${sale === 'true' ? 'sale' : ''}`}>
         <div className="product-image" title="Details anzeigen" onClick={() => setDetailProduct(id)}>
-            <img src={thumbnail} alt={title} />
+            <img src={thumbnail} alt={title} width="100" height="100" />
         </div>
         <div className="product-details">
             <span className="product-title">{title}</span>
