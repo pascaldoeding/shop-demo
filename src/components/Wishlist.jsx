@@ -10,6 +10,7 @@ export default function Wishlist({wishlist, wishlistDispatch, setDetailProduct, 
         <h2>Wunschliste</h2>
         <ul className="wishlist-items">
             {wishlist.map(id => <WishlistItem key={id} id={id} wishlistDispatch={wishlistDispatch} setDetailProduct={setDetailProduct} setShowWishlist={setShowWishlist} />)}
+            {/* Placeholder Elemente für Flex-Layout */}
             <li className="wishlist-item placeholder"></li>
             <li className="wishlist-item placeholder"></li>
             <li className="wishlist-item placeholder"></li>

@@ -6,6 +6,7 @@ export default function Product({id, title, thumbnail, variants, sale, price, ba
     const [variant, setVariant] = useState('');
     const [currentPrice, setCurrentPrice] = useState(null);
 
+    // Hilfsvariable: Ist Produkt auf Wunschliste
     const isOnWishlist = wishlist.some(item => item === id);
 
     useEffect(() => {

@@ -5,14 +5,16 @@ import ImageGallery from "./ImageGallery";
 import { getProduct, setDelayedAlert } from "./Shop"
 
 export default function ProductDetail({id, basketDispatch, wishlistDispatch, wishlist, setAlert}) {
+    // Daten des gewählten Produktes holen
     const product = getProduct(id);
 
-    // Wenn Produkt nicht existiert
+    // Wenn Produkt nicht existiert: Meldung anzeigen
     if(!product){
         return <strong className="error">Das Produkt konnte leider nicht gefunden werden!</strong>
     }
 
     const {title, description, images, variants, sale, price} = product;
+    // Hilfsvariable: Ist Produkt auf Wunschliste
     const isOnWishlist = wishlist.some(item => item === id);
 
     const [variant, setVariant] = useState('');

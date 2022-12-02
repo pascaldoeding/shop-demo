@@ -21,15 +21,15 @@ export default function Basket({basket, basketDispatch, setDetailProduct, setSho
   )
 }
 
-// Gesamtbetrag berechnen
+// Gesamtbetrag des Warenkorbs berechnen
 function getTotalPrice(basket){
     return basket.reduce((prev, cur) => {
         const product = getProduct(cur.id);
-        if(cur.variants){
+        if(cur.variants){  // Produkt hat Varianten
             return prev + cur.variants.reduce((prevVar, curVar) => {
                 return prevVar + curVar.amount * product.variants[curVar.id].price
             }, 0)
-        } else {
+        } else { // Produkt hat keine Varianten
             return prev + cur.amount * product.price;
         }
     }, 0)

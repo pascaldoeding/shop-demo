@@ -4,6 +4,7 @@ import Wishlist from "./Wishlist";
 
 export default function Modal({basket, showBasket, setShowBasket, basketDispatch, wishlist, showWishlist, setShowWishlist, wishlistDispatch, detailProduct, setDetailProduct, setAlert}) {
 
+    // Setzt beim Schließen des Modal alle relevanten Status zurück auf default-Wert
     function resetModal() {
         setShowBasket(false);
         setShowWishlist(false);

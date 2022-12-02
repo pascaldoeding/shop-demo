@@ -129,7 +129,7 @@ export function getProduct(searchId){
     return allProducts.find(({id}) => id === searchId);
 }
 
-
+// Logik für Filter
 function filterReducer(filters, message) {
     switch(message.action){
         case 'toggle':
@@ -144,28 +144,38 @@ function filterReducer(filters, message) {
     return filters;
 }
 
+// Logik für den Warenkorb
 function basketReducer(basket, message) {
+    // Hilfsvariable: Produkt noch nicht im Warenkorb?
     const productNotInBasket = !basket.some(({id}) => id === message.id)
 
     switch (message.action){
       case 'add':
+        // Wenn Produkt noch nicht in Warenkorb
         if(productNotInBasket){
+            // Wenn Produkt Variante hat
             if(message.variant !== '' && message.variant !== undefined){
                 return [...basket, {id: message.id, variants:[{id: message.variant, amount: 1}]}];
             }
+            // Wenn Produkt keine Variante hat
             return [...basket, {id: message.id, amount: 1}];
         } 
 
         return basket.map((item) => {
           if(item.id === message.id) {
+            // Wenn Produkt Variante hat
             if(message.variant !== '' && message.variant !== undefined){
+                // Hilfsvariable: Variante noch nicht im Warenkorb?
                 const variantNotInBasket = !item.variants.some(({id}) => id === message.variant);
+                // Wenn Variante noch nicht im Warenkorb
                 if(variantNotInBasket){
                    return {id: item.id, variants:[...item.variants, {id: message.variant, amount: 1}]};
                 }
+                // Wenn Variante bereits im Warenkorb
                 return {
                     id: item.id,
                     variants: item.variants.map((variant) =>{
+                        // Alle Varianten durchlaufen und entsprechende Variante anpassen
                         if(variant.id === message.variant){
                             return {id: variant.id, amount: variant.amount + 1};
                         }
@@ -173,6 +183,7 @@ function basketReducer(basket, message) {
                     })
                 }
             }
+            // Wenn Produkt keine Variante hat
             return {id: item.id, amount: item.amount + 1};
           }
           return item;
@@ -181,6 +192,7 @@ function basketReducer(basket, message) {
       case 'remove':
         return basket.map((item) => {
           if(item.id === message.id) {
+            // Wenn Produkt Variante hat
             if(message.variant !== '' && message.variant !== undefined){
                 return {
                     id: item.id,
@@ -192,41 +204,49 @@ function basketReducer(basket, message) {
                     })
                 }
             }
+            // Wenn Produkt keine Variante hat
             return {id: item.id, amount: item.amount > 0 ? item.amount - 1 : 0};
           }
           return item;
         })
   
       case 'delete':
+        // Wenn Produkt Variante hat
         if(message.variant !== undefined){
+            // Temporärer Warenkorb
             const tempBasket = basket.map((item) => {
                 if(item.id === message.id){
+                    // Mehr als eine Variante vorhanden: Lösche nur Variante
                     if(item.variants?.length > 1){
                         return{
                             id: item.id,
                             variants: item.variants.filter((variant) => variant.id !== message.variant)
                         }
                     }
+                    // Nur eine Variante vorhanden: "Flag" zum Löschen des Produkts setzen
                     return {id: false};
                 }
                 return item;
             })
+            // Zu Löschende Produkte mit .filter() entfernen
             return tempBasket.filter((item) => item.id !== false);
         }
+        // Wenn Produkt keine Variante hat
         return basket.filter((item) => item.id !== message.id);
   
       case 'clear': 
         return [];
     }
     return basket;
-  }
+}
 
+// Warenkorb aus localStorage laden (falls vorhanden)
 function getInitialBasket(){
     const savedBasket = JSON.parse(localStorage.getItem('basket'));
     return savedBasket ? savedBasket : [];
 }
 
-
+// Logik für die Wusnchliste 
 function wishlistReducer(wishlist, message) {
     switch(message.action){
         case 'toggle':
@@ -241,11 +261,14 @@ function wishlistReducer(wishlist, message) {
     return wishlist;
 }
 
+// Wunschliste aus localStorage laden (falls vorhanden)
 function getInitialWishlist(){
     const savedWishlist = JSON.parse(localStorage.getItem('wishlist'));
     return savedWishlist ? savedWishlist : [];
 }
 
+// Logik um Alerts/Notifications verzögert anzuzeigen
+// Setzt Alert erst zurück und zeigt verzögert neuen Alert an
 export function setDelayedAlert(setAlert, alert){
     setAlert(false);
     setTimeout(() => {
