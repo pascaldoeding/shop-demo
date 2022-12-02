@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 export default function ImageGallery({images}) {
-    const [imageIndex, setImageIndex] = useState(0)
+    const [imageIndex, setImageIndex] = useState(0);
 
     return (
         <div className="image-gallery">

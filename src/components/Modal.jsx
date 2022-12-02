@@ -14,7 +14,7 @@ export default function Modal({basket, showBasket, setShowBasket, basketDispatch
     return (
         <div className="overlay" onClick={(e) => { 
             if(e.target === e.currentTarget) {
-                resetModal()
+                resetModal();
             }
         }}>
             <div className="modal">
