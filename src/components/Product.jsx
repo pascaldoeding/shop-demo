@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getFormattedPrice, getPriceRange } from "./helpers";
+import { getFormattedPrice, getPriceRange } from "../helpers";
 import { setDelayedAlert } from "./Shop";
 
 export default function Product({id, title, thumbnail, variants, sale, price, basketDispatch, wishlistDispatch, wishlist, setDetailProduct, setAlert}) {

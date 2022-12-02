@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import BasketItem from "./BasketItem";
-import { getFormattedPrice } from "./helpers";
+import { getFormattedPrice } from "../helpers";
 import { getProduct } from "./Shop";
 
 export default function Basket({basket, basketDispatch, setDetailProduct, setShowBasket}) {

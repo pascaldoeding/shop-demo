@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { getFormattedPrice, getPriceRange } from "./helpers";
+import { getFormattedPrice, getPriceRange } from "../helpers";
 import ImageGallery from "./ImageGallery";
 import { getProduct, setDelayedAlert } from "./Shop"
 

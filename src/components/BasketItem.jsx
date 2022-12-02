@@ -1,4 +1,4 @@
-import { getFormattedPrice } from "./helpers";
+import { getFormattedPrice } from "../helpers";
 import { getProduct } from "./Shop"
 
 export default function BasketItem({id, amount, variants, basketDispatch, setDetailProduct, setShowBasket}) {
