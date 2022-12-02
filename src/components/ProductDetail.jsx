@@ -76,7 +76,7 @@ export default function ProductDetail({id, basketDispatch, wishlistDispatch, wis
                 </button>
                 <button 
                     className={`product-detail-menu-button ${!isOnWishlist ? 'passive' : ''}`}
-                    title="Zur Wunschliste hinzufügen"
+                    title={!isOnWishlist ? 'Zur Wunschliste hinzufügen' : 'Von Wunschliste entfernen'}
                     onClick={() => wishlistDispatch({id, action: 'toggle'})}
                 >
                     <img src="icons/heart.svg"></img>
