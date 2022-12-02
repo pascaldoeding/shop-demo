@@ -214,8 +214,8 @@
         z-index: 200;
 
         // Animation
-        transform: translateY(100px);
-        -webkit-transform: translateY(100px);
+        transform: translateY(calc(100% + 20px));
+        -webkit-transform: translateY(calc(100% + 20px));
         animation: slide-in 0.3s forwards;
         -webkit-animation: slide-in 0.3s forwards;
 
