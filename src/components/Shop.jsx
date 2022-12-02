@@ -65,7 +65,7 @@ export default function Shop() {
         if(detailProduct != null) {
             url.searchParams.set('product', detailProduct);
         }
-        window.history.replaceState({}, [], url)
+        window.history.replaceState({}, [], url);
     }, [detailProduct])
 
     useEffect(() => {
@@ -147,7 +147,7 @@ function filterReducer(filters, message) {
 // Logik für den Warenkorb
 function basketReducer(basket, message) {
     // Hilfsvariable: Produkt noch nicht im Warenkorb?
-    const productNotInBasket = !basket.some(({id}) => id === message.id)
+    const productNotInBasket = !basket.some(({id}) => id === message.id);
 
     switch (message.action){
       case 'add':

@@ -27,7 +27,7 @@ function getTotalPrice(basket){
         const product = getProduct(cur.id);
         if(cur.variants){  // Produkt hat Varianten
             return prev + cur.variants.reduce((prevVar, curVar) => {
-                return prevVar + curVar.amount * product.variants[curVar.id].price
+                return prevVar + curVar.amount * product.variants[curVar.id].price;
             }, 0)
         } else { // Produkt hat keine Varianten
             return prev + cur.amount * product.price;
