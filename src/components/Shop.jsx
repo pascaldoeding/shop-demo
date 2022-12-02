@@ -1,4 +1,5 @@
 import { useEffect, useReducer, useState } from "react"
+import { Helmet } from "react-helmet-async";
 import Alert from "./Alert";
 import FilterBar from "./FilterBar";
 import Modal from "./Modal";
@@ -78,6 +79,9 @@ export default function Shop() {
 
   return (
     <div className="shop">
+        <Helmet>
+            <title>DemoShop</title>
+        </Helmet>
         <FilterBar categories={categories} filters={filters} filtersDispatch={filtersDispatch} />
         <ProductList products={products} basketDispatch={basketDispatch} wishlistDispatch={wishlistDispatch} wishlist={wishlist} setDetailProduct={setDetailProduct} setAlert={setAlert}/>
 

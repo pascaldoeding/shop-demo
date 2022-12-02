@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import BasketItem from "./BasketItem";
 import { getFormattedPrice } from "./helpers";
 import { getProduct } from "./Shop";
@@ -5,6 +6,9 @@ import { getProduct } from "./Shop";
 export default function Basket({basket, basketDispatch, setDetailProduct, setShowBasket}) {
   return (
     <div className="basket">
+        <Helmet>
+            <title>DemoShop - Warenkorb</title>
+        </Helmet>
         <h2>Warenkorb</h2>
         <ul className="basket-items">
             {basket.map(item => <BasketItem key={item.id} {...item} basketDispatch={basketDispatch} setDetailProduct={setDetailProduct} setShowBasket={setShowBasket} />)}

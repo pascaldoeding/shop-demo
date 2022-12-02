@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { getFormattedPrice, getPriceRange } from "./helpers";
 import ImageGallery from "./ImageGallery";
 import { getProduct, setDelayedAlert } from "./Shop"
@@ -37,6 +38,9 @@ export default function ProductDetail({id, basketDispatch, wishlistDispatch, wis
 
     return (
         <div className={`product-detail ${sale === 'true' ? 'sale' : ''}`}>
+            <Helmet>
+                <title>DemoShop - {title}</title>
+            </Helmet>
             <h2 className="product-detail-title">{title}</h2>
             {images.length > 1 ?
                 <ImageGallery images={images} />
